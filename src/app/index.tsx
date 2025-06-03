@@ -1,15 +1,12 @@
 import { Text, View } from "react-native";
+import Constants  from 'expo-constants'
+
+const statusBarHeight = Constants.statusBarHeight;
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text></Text>
+    <View className="w-full px-4" style={{ marginTop: statusBarHeight  + 8}}>
+      <Text>Hello Word!</Text>
     </View>
   );
 }
