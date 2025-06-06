@@ -1,4 +1,5 @@
 import ButtonPerson from "@/src/components/ButtonPerson";
+import { router } from "expo-router";
 import React, { useRef, useState } from "react";
 import { View, Text, Image } from "react-native";
 import AppIntroSlider from "react-native-app-intro-slider";
@@ -35,7 +36,7 @@ export default function Onboarding() {
     if (currentIndex < slides.length - 1) {
       sliderRef.current?.goToSlide(currentIndex + 1, true);
     } else {
-      console.log('ir p tela de decisao');
+      router.replace('/SelectProfile')
 
     }
   }
